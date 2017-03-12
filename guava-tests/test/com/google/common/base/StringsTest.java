@@ -28,6 +28,10 @@ import junit.framework.TestCase;
  */
 @GwtCompatible(emulated = true)
 public class StringsTest extends TestCase {
+  
+  public void testMistake() {
+    assertEquals("a", Strings.nullToEmpty(null));
+  }
   public void testNullToEmpty() {
     assertEquals("", Strings.nullToEmpty(null));
     assertEquals("", Strings.nullToEmpty(""));
